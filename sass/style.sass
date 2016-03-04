@@ -126,21 +126,21 @@ a
 			border-color: #fff
 			color: white
 .Main-item--aduni
-	background-image: url("../images/bg-aduni.jpg")
+	background-image: url("../images/bg-aduni.png")
 	&:hover
-		background-image: url("../images/bg-aduni-hover.jpg")
+		background-image: url("../images/bg-aduni-hover.png")
 		.Main-item-logo--aduni
 			background-image: url("../images/logo-aduni-hover.png")
 .Main-item--cv
-	background-image: url("../images/bg-cesarvallejo.jpg")
+	background-image: url("../images/bg-cesarvallejo.png")
 	&:hover
-		background-image: url("../images/bg-cesarvallejo-hover.jpg")
+		background-image: url("../images/bg-cesarvallejo-hover.png")
 		.Main-item-logo--cv
 			background-image: url("../images/logo-cv-hover.png")
 .Main-item--bertolt
-	background-image: url("../images/bg-bertolt.jpg")
+	background-image: url("../images/bg-bertolt.png")
 	&:hover
-		background-image: url("../images/bg-bertolt-hover.jpg")
+		background-image: url("../images/bg-bertolt-hover.png")
 		.Main-item-logo--bertolt
 			background-image: url("../images/logo-bertolt-hover.png")
 .Main-item-link
@@ -160,6 +160,7 @@ a
 .Main-item-logo--cv
 	background-image: url("../images/logo-cv.png")
 	height: 163px
+	margin-bottom: 20px
 	width: 264px
 .Main-item-logo--bertolt
 	background-image: url("../images/logo-bertolt.png")
@@ -176,12 +177,28 @@ a
 .Main-item-readmore--aduni
 	border: 1px solid $lightBlue
 	color: $lightBlue
+	&:focus
+		color: $lightBlue
 .Main-item-readmore--cv
 	border: 1px solid $red
 	color: $red
+	&:focus
+		color: $red
 .Main-item-readmore--bertolt
 	border: 1px solid $redDark
 	color: $redDark
+	&:focus
+		color: $redDark
+@media only screen and (max-width: 1300px)
+	.Main-item-link
+		+transform(translateY(0) rotate(-12deg))
+@media only screen and (max-width: 1100px)
+	.Main-item
+		+transform(translateY(0) rotate(0deg))
+	.Main-item-link
+		+transform(translateY(0) rotate(0deg))
+	.Main-item-logo
+		background-size: 70%
 
 /* --------------------------- *\
 			FOOTER
@@ -189,6 +206,7 @@ a
 .Footer
 	background-color: #FFF
 	bottom: 0
+	padding-top: 155px
 	position: absolute
 	width: 100%
 	z-index: 9
@@ -199,10 +217,23 @@ a
 	color: $blue
 	font-family: "NewsGothicStd"
 	font-size: 0.75em
-.Footer-logos
-	background-color: #f6f6f6
+// .Footer-logos
+	// background-color: #f6f6f6
 .Footer-logos-list
 	margin-bottom: 0
+@media only screen and (max-width: 1800px)
+	.Footer
+		padding-top: 55px
+@media only screen and (max-width: 1500px)
+	.Footer
+		padding-top: 0
+@media only screen and (max-width: 1300px)
+	.Footer
+		padding-top: 65px
+@media only screen and (max-width: 1100px)
+	.Footer
+		padding-top: 0
+
 
 /* --------------------------- *\
 			ABOUT

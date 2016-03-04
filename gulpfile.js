@@ -18,8 +18,8 @@ var paths = {
 		'css/style.css'
 	],
 	js: [
-		'bower_components/jquery/dist/jquery.min.js',
-		'bower_components/bootstrap/dist/js/bootstrap.min.js',
+		// 'bower_components/jquery/dist/jquery.min.js',
+		// 'bower_components/bootstrap/dist/js/bootstrap.min.js',
 		// 'public/libraries/formvalidation/dist/js/formValidation.js',
 		// 'public/libraries/formvalidation/dist/js/framework/bootstrap.js',
 		// 'public/libraries/formvalidation/dist/js/language/es_ES.js',
@@ -46,9 +46,9 @@ gulp.task('compass', function(){
 
 gulp.task('js', function(){
 	gulp.src(paths.js)
-		.pipe(concat('main.js'))
+		// .pipe(concat('main.js'))
 		.pipe(rename({suffix: '.min'}))
-		// .pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('js/'));
 });
 
@@ -70,7 +70,7 @@ gulp.task('watch', function(){
 	gulp.watch(paths.jshint, ['jshint']);
 	gulp.watch(paths.compass, ['compass']);
 	gulp.watch(paths.js, ['js']);
-	gulp.watch(paths.concatcss, ['concatcss']);
+	// gulp.watch(paths.concatcss, ['concatcss']);
 });
 
 gulp.task('default', ['concatcss', 'jshint', 'js']);
