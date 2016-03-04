@@ -1,0 +1,15 @@
+*.log
+sitemap.xml
+sitemap.xml.gz
+
+/resources
+/.sass-cache
+/vendor
+/node_modules
+/bower_components
+
+/readme.html
+/license.txt
+
+/nbproject/private/
+/nbproject

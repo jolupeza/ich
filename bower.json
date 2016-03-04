@@ -1,0 +1,24 @@
+{
+  "name": "ich",
+  "description": "Landing page ICH",
+  "main": "index.html",
+  "authors": [
+    "José Pérez"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "ICH"
+  ],
+  "moduleType": [],
+  "homepage": "https://github.com/jolupeza/informal",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

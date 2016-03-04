@@ -1,0 +1,233 @@
+@import "compass/css3"
+
+/* --------------------------- *\
+			FONTS
+/* --------------------------- */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro)
+@font-face
+	font-family: 'FuturaBTExtraBI'
+	src: url('../fonts/FuturaBtExtraBlackItalic.eot')
+	src: url('../fonts/FuturaBtExtraBlackItalic.eot?#iefix') format('embedded-opentype'), url('../fonts/FuturaBtExtraBlackItalic.woff') format('woff'), url('../fonts/FuturaBtExtraBlackItalic.woff2') format('woff2'), url('../fonts/FuturaBtExtraBlackItalic.ttf') format('truetype'), url('../fonts/FuturaBtExtraBlackItalic.svg#FuturaBTExtraBI') format('svg')
+	font-weight: normal
+	font-style: normal
+
+@font-face
+	font-family: 'NewsGothicStd'
+	src: url('../fonts/NewsGothicStd.eot')
+	src: url('../fonts/NewsGothicStd.eot?#iefix') format('embedded-opentype'), url('../fonts/NewsGothicStd.woff') format('woff'), url('../fonts/NewsGothicStd.ttf') format('truetype'), url('../fonts/NewsGothicStd.svg#NewsGothicStd') format('svg')
+	font-weight: normal
+	font-style: normal
+
+/* --------------------------- *\
+			VARIABLE
+/* --------------------------- */
+$blue: #004998
+$lightBlue: #00a6e2
+$red: #f42434
+$redDark: #d2081e
+
+/* --------------------------- *\
+			GENERAL
+/* --------------------------- */
+body, html
+	height: 100%
+	width: 100%
+body
+	font-size: 16px
+	overflow: hidden
+	position: relative
+a
+	color: $blue
+	&:hover
+		color: $lightBlue
+
+/* --------------------------- *\
+			HEADER
+/* --------------------------- */
+.Header
+	background-color: #FFF
+	+box-shadow(rgba(black, 0.3) 2px 2px 10px)
+	position: relative
+	z-index: 9
+.Header-social
+	position: absolute
+	right: 10%
+	top: 0
+.Header-social-list
+	background: transparent url('../images/bg-nav-social.png') center center no-repeat
+	height: 58px
+	margin-bottom: 0
+	padding-top: 7px
+	width: 310px
+.Header-social-item
+	vertical-align: top
+	a
+		background-color: transparent
+		background-image: url('../images/sprites.png')
+		background-repeat: no-repeat
+		display: block
+		height: 30px
+		width: 25px
+.Social-fb
+	background-position: 0 0
+.Social-yt
+	background-position: -25px 0
+.Social-phone
+	color: white
+	font-family: "FuturaBTExtraBI"
+	font-size: 1.625em
+	width: auto !important
+	&::before
+		background: transparent url('../images/sprites.png') -50px 0 no-repeat
+		content: ""
+		display: inline-block
+		height: 30px
+		margin-right: 5px
+		vertical-align: middle
+		width: 25px
+.Header-wrapperButton
+	position: absolute
+	text-align: center
+	width: 100%
+.Header-button
+	background-color: #FFF
+	border: 1px solid #fff
+	+border-radius(0 0 80px 80px)
+	+box-shadow(rgba(black, 0.3) 2px 2px 10px)
+	height: 40px
+	width: 80px
+	z-index: 9
+	span
+		background: transparent url('../images/sprites.png') -75px 0 no-repeat
+		display: block
+		height: 22px
+		margin: 0 auto
+		width: 22px
+
+/* --------------------------- *\
+			MAIN
+/* --------------------------- */
+.Main
+	display: table
+	height: 100%
+	table-layout: fixed
+	width: 100%
+.Main-item
+	background-repeat: no-repeat
+	background-size: contain
+	display: table-cell
+	position: relative
+	vertical-align: top
+	width: 33.3%
+	+transform(translateY(-60px) rotate(12deg))
+	// > img
+	&:hover
+		.Main-item-readmore
+			border-color: #fff
+			color: white
+.Main-item--aduni
+	background-image: url("../images/bg-aduni.jpg")
+	&:hover
+		background-image: url("../images/bg-aduni-hover.jpg")
+		.Main-item-logo--aduni
+			background-image: url("../images/logo-aduni-hover.png")
+.Main-item--cv
+	background-image: url("../images/bg-cesarvallejo.jpg")
+	&:hover
+		background-image: url("../images/bg-cesarvallejo-hover.jpg")
+		.Main-item-logo--cv
+			background-image: url("../images/logo-cv-hover.png")
+.Main-item--bertolt
+	background-image: url("../images/bg-bertolt.jpg")
+	&:hover
+		background-image: url("../images/bg-bertolt-hover.jpg")
+		.Main-item-logo--bertolt
+			background-image: url("../images/logo-bertolt-hover.png")
+.Main-item-link
+	position: absolute
+	text-align: center
+	top: 15%
+	+transform(translateY(60px) rotate(-12deg))
+	width: 100%
+.Main-item-logo
+	background-position: center center
+	background-repeat: no-repeat
+	margin: 20px auto 40px auto
+.Main-item-logo--aduni
+	background-image: url("../images/logo-aduni.png")
+	height: 132px
+	width: 283px
+.Main-item-logo--cv
+	background-image: url("../images/logo-cv.png")
+	height: 163px
+	width: 264px
+.Main-item-logo--bertolt
+	background-image: url("../images/logo-bertolt.png")
+	height: 135px
+	width: 386px
+.Main-item-readmore
+	font-family: "FuturaBTExtraBI"
+	padding: 10px 15px
+	+transition(all 0.2s ease)
+	&:hover
+		border-color: #fff
+		color: white
+		text-decoration: none
+.Main-item-readmore--aduni
+	border: 1px solid $lightBlue
+	color: $lightBlue
+.Main-item-readmore--cv
+	border: 1px solid $red
+	color: $red
+.Main-item-readmore--bertolt
+	border: 1px solid $redDark
+	color: $redDark
+
+/* --------------------------- *\
+			FOOTER
+/* --------------------------- */
+.Footer
+	background-color: #FFF
+	bottom: 0
+	position: absolute
+	width: 100%
+	z-index: 9
+.Footer-copy
+	border-top: 1px solid $blue
+	padding-top: 15px
+.Footer-text
+	color: $blue
+	font-family: "NewsGothicStd"
+	font-size: 0.75em
+.Footer-logos
+	background-color: #f6f6f6
+.Footer-logos-list
+	margin-bottom: 0
+
+/* --------------------------- *\
+			ABOUT
+/* --------------------------- */
+.About
+	background-color: $blue
+	display: none
+	height: 100%
+	left: 30%
+	position: absolute
+	margin: 0 auto
+	padding: 100px 30px 0
+	+transform(translateY(-80px) rotate(12deg))
+	width: 40%
+	z-index: 2
+.About-title
+	color: white
+	font-family: "FuturaBTExtraBI"
+	font-size: 1.75em
+	font-style: normal
+	+transform(translateY(80px) rotate(-12deg))
+.About-text
+	color: white
+	font-family: "Source Sans Pro",
+	font-size: 1.375em
+	+transform(translateY(80px) rotate(-12deg))
+
+
