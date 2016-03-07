@@ -40,6 +40,11 @@ a
 	color: $blue
 	&:hover
 		color: $lightBlue
+@media only screen and (max-width: 767px)
+	body, html
+		height: auto
+	body
+		overflow: visible
 
 /* --------------------------- *\
 			HEADER
@@ -75,7 +80,7 @@ a
 .Social-phone
 	color: white
 	font-family: "FuturaBTExtraBI"
-	font-size: 1.625em
+	font-size: 1.5em
 	width: auto !important
 	&::before
 		background: transparent url('../images/sprites.png') -50px 0 no-repeat
@@ -103,6 +108,13 @@ a
 		height: 22px
 		margin: 0 auto
 		width: 22px
+@media only screen and (max-width: 767px)
+	.Header-social
+		right: 0
+	.Header-logo
+		margin-top: 50px
+	.Social-phone
+		font-size: 1.375em
 
 /* --------------------------- *\
 			MAIN
@@ -199,6 +211,81 @@ a
 		+transform(translateY(0) rotate(0deg))
 	.Main-item-logo
 		background-size: 70%
+@media only screen and (max-width: 991px)
+	.Main-item-link
+		top: 0
+	.Main-item-logo
+		background-size: 50%
+	.Main-item-logo--bertolt
+		background-position: 35% center
+@media only screen and (max-width: 850px)
+	.Main-item-logo--bertolt
+		background-position: 20% center
+@media only screen and (max-width: 767px)
+	.Main
+		display: block
+		height: auto
+		table-layout: auto
+	.Main-item
+		background-image: none
+		display: block
+		margin-bottom: 20px
+		+transform(none)
+		width: 100%
+		&:hover
+			background-image: none
+			.Main-item-readmore--aduni
+				border: 1px solid $lightBlue
+				color: $lightBlue
+				&:focus
+					color: $lightBlue
+			.Main-item-readmore--cv
+				border: 1px solid $red
+				color: $red
+				&:focus
+					color: $red
+			.Main-item-readmore--bertolt
+				border: 1px solid $redDark
+				color: $redDark
+				&:focus
+					color: $redDark
+	.Main-item-readmore
+		&:hover
+			&.Main-item-readmore--aduni
+				border: 1px solid $lightBlue
+				color: $lightBlue
+				&:focus
+					color: $lightBlue
+			&.Main-item-readmore--cv
+				border: 1px solid $red
+				color: $red
+				&:focus
+					color: $red
+			&.Main-item-readmore--bertolt
+				border: 1px solid $redDark
+				color: $redDark
+				&:focus
+					color: $redDark
+	.Main-item-link
+		position: static
+	.Main-item-logo
+		margin-bottom: 20px
+	.Main-item--aduni
+		&:hover
+			.Main-item-logo--aduni
+				background-image: url("../images/logo-aduni.png")
+	.Main-item--cv
+		&:hover
+			.Main-item-logo--cv
+				background-image: url("../images/logo-cv.png")
+	.Main-item--bertolt
+		&:hover
+			.Main-item-logo--bertolt
+				background-image: url("../images/logo-bertolt.png")
+	.Main-item-logo--bertolt
+		background-position: center center
+
+
 
 /* --------------------------- *\
 			FOOTER
@@ -233,7 +320,9 @@ a
 @media only screen and (max-width: 1100px)
 	.Footer
 		padding-top: 0
-
+@media only screen and (max-width: 767px)
+	.Footer
+		position: static
 
 /* --------------------------- *\
 			ABOUT
@@ -260,5 +349,17 @@ a
 	font-family: "Source Sans Pro",
 	font-size: 1.375em
 	+transform(translateY(80px) rotate(-12deg))
-
-
+@media only screen and (max-width: 991px)
+	.About
+		left: 18%
+		width: 50%
+@media only screen and (max-width: 767px)
+	.About
+		// height: auto
+		left: 0
+		padding-bottom: 30px
+		padding-top: 50px
+		+transform(none)
+		width: 100%
+	.About-title, .About-text
+		+transform(none)
