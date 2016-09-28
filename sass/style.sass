@@ -131,7 +131,7 @@ a
 	position: relative
 	vertical-align: top
 	width: 33.3%
-	+transform(translateY(-60px) rotate(12deg))
+	+transform(translateY(-75px) rotate(12deg))
 	// > img
 	&:hover
 		.Main-item-readmore
@@ -201,14 +201,21 @@ a
 	color: $redDark
 	&:focus
 		color: $redDark
+@media only screen and (max-width: 1900px)
+	.Main-item
+		+transform(translateY(-65px) rotate(12deg))
 @media only screen and (max-width: 1300px)
-	.Main-item-link
-		+transform(translateY(0) rotate(-12deg))
-@media only screen and (max-width: 1100px)
 	.Main-item
 		+transform(translateY(0) rotate(0deg))
 	.Main-item-link
 		+transform(translateY(0) rotate(0deg))
+	// .Main-item-link
+	// 	+transform(translateY(0) rotate(-12deg))
+@media only screen and (max-width: 1100px)
+	// .Main-item
+	// 	+transform(translateY(0) rotate(0deg))
+	// .Main-item-link
+	// 	+transform(translateY(0) rotate(0deg))
 	.Main-item-logo
 		background-size: 70%
 @media only screen and (max-width: 991px)
